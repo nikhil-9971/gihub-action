@@ -7,6 +7,7 @@ on:
 
 jobs:
 
+#Every jobs need seperate runner is called paralliesm
   code:
     runs-on: ubuntu-latest
     steps:
