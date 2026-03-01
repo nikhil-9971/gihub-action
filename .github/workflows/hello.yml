@@ -23,3 +23,11 @@ jobs:
       - name: Say the username
         run: echo "Hello $USER"
     
+  details:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: versions of docker & Python
+        run: docker --version && python --version
+
+      
