@@ -30,7 +30,7 @@ jobs:
 
 
   deploy:
-    needs: test
+    needs: [test, build]
     runs-on: ubuntu-latest
     steps:
       - name: Deploying app via compose
