@@ -3,7 +3,16 @@ name: CICD
 #manual click (deliver)  workflow when user needs
 on:
   workflow_dispatch:
-
+    inputs:
+      environment:
+        description: This is the environment value where work flow runs
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 
 jobs:
 
