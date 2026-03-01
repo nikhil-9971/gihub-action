@@ -3,9 +3,9 @@ name: hello
 
 # When workflow is start
 on:
-  workflow_dispatch:
-  #push:
-    #branches: [main]
+  push:
+    branches: [main]
+    paths: '**.html'
 
 #job inside in workflow
 jobs:
