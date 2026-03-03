@@ -25,3 +25,6 @@ jobs:
              
             - name: Print the runner's operating system
               run: echo "This workflow is running on $RUNNER_OS"  
+
+            - name: Intentional failure step
+              run: exit 1  
