@@ -13,3 +13,15 @@ jobs:
 
             - name: say hello
               run: echo "Hello from GitHub Actions!"
+           
+            - name: Print current date and time
+              run: echo "Current date and time $(date)" 
+            
+            - name: Print the name of the branch that triggered the workflow
+              run: echo "This workflow was triggered by a push to the branch $GITHUB_REF"
+
+            - name: List files in the repository
+              run: ls -la 
+             
+            - name: Print the runner's operating system
+              run: echo "This workflow is running on $RUNNER_OS"  
