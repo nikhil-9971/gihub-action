@@ -3,6 +3,7 @@ name: PR Check
 on:
     pull_request:
         branches: [main]
+        types: [opened, synchronize, reopened]
 
 
 jobs:
@@ -11,5 +12,5 @@ jobs:
         steps:
 
             - name: PR check is runnning
-              run: echo "PR check running for branch ${{ github.ref_name }}"
+              run: echo "PR check running for branch ${{ github.head_ref }}"
     
