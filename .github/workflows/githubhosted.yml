@@ -1,4 +1,4 @@
-name: Github Hoster Runner
+name: Github Hosted Runner
 
 on:
     push:
