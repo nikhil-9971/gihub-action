@@ -18,4 +18,28 @@ jobs:
 
             - name: Current user running the job
               run: echo "Current user is $(whoami)"
-                      
+         
+    windows-latest:
+        runs-on: windows-latest
+        steps:
+            - name: OS name is
+              run: systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+            
+            - name: Check Host Name
+              run: echo "Host name is %COMPUTERNAME%"
+
+            - name: Current user running the job
+              run: echo "Current user is %USERNAME%"      
+     
+    
+    macos-latest:
+        runs-on: macos-latest
+        steps:
+            - name: OS name is
+              run: sw_vers
+            
+            - name: Check Host Name
+              run: echo "Host name is $(hostname)"
+
+            - name: Current user running the job
+              run: echo "Current user is $(whoami)"          
